@@ -9,7 +9,6 @@ import { icon } from "../assets";
 import { SidebarLinks } from "../common/data";
 
 const Sidebar = () => {
-	const mainColor = `${"var(--main-color)"}`;
 	const textColor = `${"var(--txt-white)"}`;
 
 	const dispatch = useDispatch();
@@ -79,6 +78,7 @@ const Sidebar = () => {
 				transition={"0.4s"}
 				overflow="hidden"
 				className={value ? "side active" : "side"}
+				zIndex="99"
 			>
 				<Box as="ul" position={"absolute"} top="0" left={0} width="100%">
 					<Box
@@ -132,7 +132,7 @@ const Sidebar = () => {
 							<Box
 								as="i"
 								fontSize={"24px"}
-								color={mainColor}
+								color={"black"}
 								className="bx bx-x"
 							></Box>
 						</Flex>
